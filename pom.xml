@@ -108,7 +108,6 @@
 				</executions>
         	</plugin>
 		</plugins>
-		<finalName>tpAchatProject</finalName>
 	</build>
 
 </project>
