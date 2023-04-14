@@ -108,7 +108,7 @@
 				</executions>
         	</plugin>
 		</plugins>
-		<final-name>tpAchatProject</final-name>
+		<finalName>tpAchatProject</finalName>
 	</build>
 
 </project>
