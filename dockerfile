@@ -1,4 +1,5 @@
 FROM openjdk:11
-EXPOSE 8080
-ADD target/tpAchatProject.jar tpAchatProject.jar
-Entrypoint ["java", "-jar", "tpAchatProject.jar"]
+WORKDIR /app
+COPY target/*.jar .
+EXPOSE 5000
+CMD ["java", "-jar", "tpAchatProject.jar"]
