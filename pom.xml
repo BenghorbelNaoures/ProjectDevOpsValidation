@@ -9,7 +9,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.esprit.examen</groupId>
-	<artifactId>tpachatproject</artifactId>
+	<artifactId>tpAchatProject</artifactId>
 	<version>1.0</version>
 	<name>tpAchatProject</name>
 	<description>tpAchatProject</description>
@@ -100,15 +100,26 @@
 					</execution>
 					<execution>
 						<id>report</id>
-						<phase>test</phase>
+						<phase>prepare-package</phase>
 						<goals>
 							<goal>report</goal>
 						</goals>
 					</execution>
+					<execution>
+						<id>post-unit-test</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+						<configuration>
+							<dataFile>target/jacoco.exec</dataFile>
+							<outputDirectory>target/jacoco-ut</outputDirectory>
+						</configuration>
+					</execution>				
 				</executions>
         	</plugin>
 		</plugins>
-		<finalName>tpachatproject</finalName>
+		<finalName>tpAchatProject</finalName>
 	</build>
 
 </project>
